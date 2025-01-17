@@ -43,7 +43,7 @@ class KaryawanController extends Controller
 
     public function getJabatan(Request $request)
     {
-        $search = $request->input('name'); // Nama yang akan dicari
+        $search = $request->input('name');
         $jabatans = Jabatan::where('nama_jabatan', 'like', '%' . $search . '%')->get();
 
         return response()->json($jabatans);

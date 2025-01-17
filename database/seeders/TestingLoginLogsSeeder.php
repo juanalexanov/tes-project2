@@ -14,8 +14,6 @@ class TestingLoginLogsSeeder extends Seeder
      */
     public function run(): void
     {
-        // Misal kita pakai username "testuser".
-        // Ganti "testuser" sesuai username yang sudah ada di tabel karyawans
         $karyawan = Karyawan::where('username', 'alex')->first();
 
         if ($karyawan) {

@@ -39,9 +39,6 @@ class DashboardController extends Controller
             $endDate   = Carbon::parse($end_date_str);
         }
 
-        // Selanjutnya filter data (karyawan, unit, jabatan, login logs)
-        // persis seperti sebelumnya, misal:
-
         if ($startDate && $endDate) {
             $totalKaryawan = Karyawan::whereBetween('created_at', [$startDate, $endDate])->count();
             $totalUnits    = Unit::whereBetween('created_at', [$startDate, $endDate])->count();

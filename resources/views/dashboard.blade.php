@@ -72,7 +72,7 @@
             @forelse($topUsers as $user)
                 <tr>
                     <td>
-                        {{-- Pastikan Anda punya relasi karyawan() di LoginLog --}}
+
                         {{ optional($user->karyawan)->nama }}
                     </td>
                     <td>{{ $user->total_login }}</td>
